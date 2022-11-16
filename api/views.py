@@ -120,7 +120,7 @@ class UpdateRoomView(APIView):
                 return Response({'msg': 'Room does not exist'}, status=status.HTTP_404_NOT_FOUND)
             
             room = queryset[0]
-            user_id = self.requests.session.session_key
+            user_id = self.request.session.session_key
             if room.host != user_id:
                 return Response({'msg': 'You are not the host of the room'}, status=status.HTTP_403_FORBIDDEN)
             
