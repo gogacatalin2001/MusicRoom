@@ -138,3 +138,4 @@ node_modules
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+spotify/credentials.py
